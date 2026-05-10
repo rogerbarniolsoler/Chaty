@@ -1,50 +1,43 @@
-# Welcome to your Expo app 👋
+# Aplicació de Xat Real-time amb Expo i Supabase
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aquest projecte consisteix en una aplicació de missatgeria instantània desenvolupada amb **React Native (Expo)** i **Supabase**. L'aplicació permet la comunicació en temps real entre usuaris, gestionant la sessió de forma global i oferint una experiència d'usuari fluida.
 
-## Get started
+## 🚀 Característiques Principals
 
-1. Install dependencies
+### 🔐 Autenticació i Gestió d'Usuaris
+* **Registre i Login**: Sistema d'accés complet mitjançant Supabase Auth.
+* **Estat Global (Zustand)**: Gestió de la sessió de l'usuari (sessió activa, dades del perfil) de forma centralitzada per evitar els re-renders.
+* **Persistència**: La sessió es manté activa fins i tot després de tancar l'aplicació.
 
-   ```bash
+### 💬 Sistema de Xat Real-time
+* **Comunicació instantània**: Ús de **RealTime** a través de `supabase` per rebre missatges nous sense haver de refrescar la pantalla.
+* **Historial de missatges**: Càrrega inicial de missatges antics mitjançant consultes a la base de dades (PostgreSQL).
+* **Indicador d'escriptura (Presence)**: Implementació de l'estat "està escrivint..." per millorar l'experiència d'usuari.
+* **Scroll Automàtic**: La llista de missatges es desplaça automàticament al final quan arriba un nou contingut.
+* **Diferenciació visual**: Els missatges propis s'alineen a la dreta (estil WhatsApp) per facilitar la lectura de la conversa.
+
+## 🛠️ Stack Tecnològic
+* **Frontend**: React Native amb Expo (Expo Router).
+* **Backend**: Supabase (Database & Auth).
+* **Estat Global**: Zustand.
+* **Icones**: Ionicons (@expo/vector-icons).
+
+## 🔑 Credencials de Prova
+
+Per provar el funcionament del xat en temps real entre dos dispositius, es poden utilitzar els següents comptes:
+
+**Compte Alumne:**
+* **Correu:** `alumne@gmail.com`
+* **Contrasenya:** `alumne1234`
+
+**Compte Professora:**
+* **Correu:** `professora@gmail.com`
+* **Contrasenya:** `professora1234`
+
+## ⚙️ Instal·lació i Configuració
+
+1. Clonar el repositori.
+2. Instal·lar les dependències:
    npm install
-   ```
-
-2. Start the app
-
-   ```bash
+3. Iniciar el projecte
    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
