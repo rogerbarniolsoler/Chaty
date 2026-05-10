@@ -39,5 +39,5 @@ Per provar el funcionament del xat en temps real entre dos dispositius, es poden
 1. Clonar el repositori.
 2. Instal·lar les dependències:
    npm install
-3. Iniciar el projecte
+3. Iniciar el projecte:
    npx expo start
